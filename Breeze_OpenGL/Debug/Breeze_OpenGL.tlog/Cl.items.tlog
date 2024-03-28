@@ -1,0 +1,9 @@
+C:\dev\OpenGL_BoilerPlate\src\ShaderCreation.cpp;C:\dev\OpenGL_BoilerPlate\Breeze_OpenGL\Debug\ShaderCreation.obj
+C:\dev\OpenGL_BoilerPlate\src\DefaultSettings.cpp;C:\dev\OpenGL_BoilerPlate\Breeze_OpenGL\Debug\DefaultSettings.obj
+C:\dev\OpenGL_BoilerPlate\src\FileUtil.cpp;C:\dev\OpenGL_BoilerPlate\Breeze_OpenGL\Debug\FileUtil.obj
+C:\dev\OpenGL_BoilerPlate\src\glad.c;C:\dev\OpenGL_BoilerPlate\Breeze_OpenGL\Debug\glad.obj
+C:\dev\OpenGL_BoilerPlate\src\main.cpp;C:\dev\OpenGL_BoilerPlate\Breeze_OpenGL\Debug\main.obj
+C:\dev\OpenGL_BoilerPlate\src\ErrorUtility.cpp;C:\dev\OpenGL_BoilerPlate\Breeze_OpenGL\Debug\ErrorUtility.obj
+C:\dev\OpenGL_BoilerPlate\src\Ray.cpp;C:\dev\OpenGL_BoilerPlate\Breeze_OpenGL\Debug\Ray.obj
+C:\dev\OpenGL_BoilerPlate\src\RayTracer.cpp;C:\dev\OpenGL_BoilerPlate\Breeze_OpenGL\Debug\RayTracer.obj
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp;C:\dev\OpenGL_BoilerPlate\Breeze_OpenGL\Debug\Scene.obj

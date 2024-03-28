@@ -1,0 +1,34 @@
+﻿  ShaderCreation.cpp
+  DefaultSettings.cpp
+  FileUtil.cpp
+  main.cpp
+  ErrorUtility.cpp
+  Ray.cpp
+  RayTracer.cpp
+  Scene.cpp
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(72,25): warning C4305: '+=': truncation from 'double' to 'T'
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(72,25): warning C4305:         with
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(72,25): warning C4305:         [
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(72,25): warning C4305:             T=float
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(72,25): warning C4305:         ]
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(75,25): warning C4305: '-=': truncation from 'double' to 'T'
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(75,25): warning C4305:         with
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(75,25): warning C4305:         [
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(75,25): warning C4305:             T=float
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(75,25): warning C4305:         ]
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(78,25): warning C4305: '-=': truncation from 'double' to 'T'
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(78,25): warning C4305:         with
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(78,25): warning C4305:         [
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(78,25): warning C4305:             T=float
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(78,25): warning C4305:         ]
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(81,25): warning C4305: '+=': truncation from 'double' to 'T'
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(81,25): warning C4305:         with
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(81,25): warning C4305:         [
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(81,25): warning C4305:             T=float
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(81,25): warning C4305:         ]
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(85,26): warning C4305: '+=': truncation from 'double' to 'float'
+C:\dev\OpenGL_BoilerPlate\src\Scene.cpp(89,26): warning C4305: '-=': truncation from 'double' to 'float'
+  Generating Code...
+  glad.c
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Breeze_OpenGL.vcxproj -> C:\dev\OpenGL_BoilerPlate\Debug\Breeze_OpenGL.exe
