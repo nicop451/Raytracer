@@ -1,0 +1,10 @@
+C:\dev\src\ShaderCreation.cpp;C:\dev\Breeze_OpenGL\Release\ShaderCreation.obj
+C:\dev\src\DefaultSettings.cpp;C:\dev\Breeze_OpenGL\Release\DefaultSettings.obj
+C:\dev\src\FileUtil.cpp;C:\dev\Breeze_OpenGL\Release\FileUtil.obj
+C:\dev\src\glad.c;C:\dev\Breeze_OpenGL\Release\glad.obj
+C:\dev\src\main.cpp;C:\dev\Breeze_OpenGL\Release\main.obj
+C:\dev\src\ErrorUtility.cpp;C:\dev\Breeze_OpenGL\Release\ErrorUtility.obj
+C:\dev\src\Ray.cpp;C:\dev\Breeze_OpenGL\Release\Ray.obj
+C:\dev\src\Scene.cpp;C:\dev\Breeze_OpenGL\Release\Scene.obj
+C:\dev\src\stb.cpp;C:\dev\Breeze_OpenGL\Release\stb.obj
+C:\dev\src\Textures.h;C:\dev\Breeze_OpenGL\Release\Textures.obj

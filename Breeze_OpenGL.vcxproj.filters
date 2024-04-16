@@ -25,9 +25,6 @@
     <ClCompile Include="src\DefaultSettings.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\RayTracer.cpp">
-      <Filter>Source Files\src</Filter>
-    </ClCompile>
     <ClCompile Include="src\Scene.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
@@ -43,6 +40,12 @@
     <ClCompile Include="src\ShaderCreation.cpp">
       <Filter>Source Files\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\stb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Textures.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\DefaultSettings.h">
@@ -55,9 +58,6 @@
       <Filter>Source Files\header</Filter>
     </ClInclude>
     <ClInclude Include="src\Scene.h">
-      <Filter>Source Files\header</Filter>
-    </ClInclude>
-    <ClInclude Include="src\RayTracer.h">
       <Filter>Source Files\header</Filter>
     </ClInclude>
     <ClInclude Include="src\ErrorUtility.h">

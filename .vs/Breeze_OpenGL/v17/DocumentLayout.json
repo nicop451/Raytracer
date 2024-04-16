@@ -1,0 +1,90 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\dev\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|C:\\dev\\src\\shaders\\FragmentShader.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|solutionrelative:src\\shaders\\FragmentShader.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|C:\\dev\\src\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|solutionrelative:src\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|C:\\dev\\src\\DefaultSettings.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|solutionrelative:src\\DefaultSettings.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|C:\\dev\\src\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|solutionrelative:src\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Scene.h",
+              "DocumentMoniker": "C:\\dev\\src\\Scene.h",
+              "RelativeDocumentMoniker": "src\\Scene.h",
+              "ToolTip": "C:\\dev\\src\\Scene.h",
+              "RelativeToolTip": "src\\Scene.h",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAB4AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-08T00:43:43.069Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Scene.cpp",
+              "DocumentMoniker": "C:\\dev\\src\\Scene.cpp",
+              "RelativeDocumentMoniker": "src\\Scene.cpp",
+              "ToolTip": "C:\\dev\\src\\Scene.cpp",
+              "RelativeToolTip": "src\\Scene.cpp",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAswE8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-11T15:41:07.186Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FragmentShader.frag",
+              "DocumentMoniker": "C:\\dev\\src\\shaders\\FragmentShader.frag",
+              "RelativeDocumentMoniker": "src\\shaders\\FragmentShader.frag",
+              "ToolTip": "C:\\dev\\src\\shaders\\FragmentShader.frag",
+              "RelativeToolTip": "src\\shaders\\FragmentShader.frag",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB0AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-08T18:46:18.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DefaultSettings.cpp",
+              "DocumentMoniker": "C:\\dev\\src\\DefaultSettings.cpp",
+              "RelativeDocumentMoniker": "src\\DefaultSettings.cpp",
+              "ToolTip": "C:\\dev\\src\\DefaultSettings.cpp",
+              "RelativeToolTip": "src\\DefaultSettings.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-05T14:26:34.865Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

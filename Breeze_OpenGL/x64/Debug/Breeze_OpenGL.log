@@ -2,14 +2,45 @@
   DefaultSettings.cpp
   FileUtil.cpp
   main.cpp
-C:\dev\Raytracer\src\Scene.h(8,10): error C1083: Cannot open include file: 'glm\glm.hpp': No such file or directory
-  (compiling source file 'src/main.cpp')
-  
   ErrorUtility.cpp
   Ray.cpp
   RayTracer.cpp
   Scene.cpp
-C:\dev\Raytracer\src\Scene.h(8,10): error C1083: Cannot open include file: 'glm\glm.hpp': No such file or directory
-  (compiling source file 'src/Scene.cpp')
-  
+C:\dev\src\Scene.cpp(72,25): warning C4305: '+=': truncation from 'double' to 'T'
+C:\dev\src\Scene.cpp(72,25): warning C4305:         with
+C:\dev\src\Scene.cpp(72,25): warning C4305:         [
+C:\dev\src\Scene.cpp(72,25): warning C4305:             T=float
+C:\dev\src\Scene.cpp(72,25): warning C4305:         ]
+C:\dev\src\Scene.cpp(75,25): warning C4305: '-=': truncation from 'double' to 'T'
+C:\dev\src\Scene.cpp(75,25): warning C4305:         with
+C:\dev\src\Scene.cpp(75,25): warning C4305:         [
+C:\dev\src\Scene.cpp(75,25): warning C4305:             T=float
+C:\dev\src\Scene.cpp(75,25): warning C4305:         ]
+C:\dev\src\Scene.cpp(78,25): warning C4305: '-=': truncation from 'double' to 'T'
+C:\dev\src\Scene.cpp(78,25): warning C4305:         with
+C:\dev\src\Scene.cpp(78,25): warning C4305:         [
+C:\dev\src\Scene.cpp(78,25): warning C4305:             T=float
+C:\dev\src\Scene.cpp(78,25): warning C4305:         ]
+C:\dev\src\Scene.cpp(81,25): warning C4305: '+=': truncation from 'double' to 'T'
+C:\dev\src\Scene.cpp(81,25): warning C4305:         with
+C:\dev\src\Scene.cpp(81,25): warning C4305:         [
+C:\dev\src\Scene.cpp(81,25): warning C4305:             T=float
+C:\dev\src\Scene.cpp(81,25): warning C4305:         ]
+C:\dev\src\Scene.cpp(85,26): warning C4305: '+=': truncation from 'double' to 'float'
+C:\dev\src\Scene.cpp(89,26): warning C4305: '-=': truncation from 'double' to 'float'
   Generating Code...
+  glad.c
+ErrorUtility.obj : error LNK2019: unresolved external symbol glfwTerminate referenced in function "void __cdecl log_error(long,char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?log_error@@YAXJPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+Scene.obj : error LNK2001: unresolved external symbol glfwTerminate
+Scene.obj : error LNK2019: unresolved external symbol glfwInit referenced in function "private: void __cdecl Scene::createWindow(void)" (?createWindow@Scene@@AEAAXXZ)
+Scene.obj : error LNK2019: unresolved external symbol glfwWindowHint referenced in function "private: void __cdecl Scene::createWindow(void)" (?createWindow@Scene@@AEAAXXZ)
+Scene.obj : error LNK2019: unresolved external symbol glfwCreateWindow referenced in function "private: void __cdecl Scene::createWindow(void)" (?createWindow@Scene@@AEAAXXZ)
+Scene.obj : error LNK2019: unresolved external symbol glfwWindowShouldClose referenced in function "public: void __cdecl Scene::update(void)" (?update@Scene@@QEAAXXZ)
+Scene.obj : error LNK2019: unresolved external symbol glfwSetWindowShouldClose referenced in function "public: void __cdecl Scene::processInput(void)" (?processInput@Scene@@QEAAXXZ)
+Scene.obj : error LNK2019: unresolved external symbol glfwPollEvents referenced in function "public: void __cdecl Scene::update(void)" (?update@Scene@@QEAAXXZ)
+Scene.obj : error LNK2019: unresolved external symbol glfwGetKey referenced in function "public: void __cdecl Scene::processInput(void)" (?processInput@Scene@@QEAAXXZ)
+Scene.obj : error LNK2019: unresolved external symbol glfwMakeContextCurrent referenced in function "private: void __cdecl Scene::createWindow(void)" (?createWindow@Scene@@AEAAXXZ)
+Scene.obj : error LNK2019: unresolved external symbol glfwSwapBuffers referenced in function "public: void __cdecl Scene::update(void)" (?update@Scene@@QEAAXXZ)
+Scene.obj : error LNK2019: unresolved external symbol glfwGetProcAddress referenced in function "private: void __cdecl Scene::loadOpenGLFuncs(void)" (?loadOpenGLFuncs@Scene@@AEAAXXZ)
+C:\dev\dependencies\GLFW\lib-vc2022\glfw3.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\dev\x64\Debug\Breeze_OpenGL.exe : fatal error LNK1120: 11 unresolved externals

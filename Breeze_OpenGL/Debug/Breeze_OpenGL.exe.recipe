@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\dev\OpenGL_BoilerPlate\Debug\Breeze_OpenGL.exe</FullPath>
+      <FullPath>C:\dev\Debug\Breeze_OpenGL.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

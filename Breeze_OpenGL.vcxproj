@@ -84,7 +84,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GLEW_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)src;$(SolutionDir)dependencies\GLAD;$(SolutionDir)dependencies\GLFW\include;$(SolutionDir)dependencies\GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src;$(SolutionDir)dependencies\GLAD;$(SolutionDir)dependencies\GLFW\include;$(SolutionDir)dependencies\STB;$(SolutionDir)dependencies\GLM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -101,7 +101,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GLEW_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)src;$(SolutionDir)dependencies\GLAD;$(SolutionDir)dependencies\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src;$(SolutionDir)dependencies\GLM;$(SolutionDir)dependencies\STB;$(SolutionDir)dependencies\GLAD;$(SolutionDir)dependencies\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -118,7 +118,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\GLFW\include;$(SolutionDir)dependencies\GLAD;$(SolutionDir)src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\GLM;$(SolutionDir)dependencies\GLFW\include;$(SolutionDir)dependencies\GLAD;$(SolutionDir)src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -154,8 +154,9 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ErrorUtility.cpp" />
     <ClCompile Include="src\Ray.cpp" />
-    <ClCompile Include="src\RayTracer.cpp" />
     <ClCompile Include="src\Scene.cpp" />
+    <ClCompile Include="src\stb.cpp" />
+    <ClCompile Include="src\Textures.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ShaderCreation.h" />
@@ -163,7 +164,6 @@
     <ClInclude Include="src\DefaultSettings.h" />
     <ClInclude Include="src\ErrorUtility.h" />
     <ClInclude Include="src\Ray.h" />
-    <ClInclude Include="src\RayTracer.h" />
     <ClInclude Include="src\FileUtil.h" />
     <ClInclude Include="src\Scene.h" />
   </ItemGroup>
