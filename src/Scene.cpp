@@ -61,23 +61,32 @@ Scene::Scene() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     // load and generate the texture
-    int width, height, nrChannels;
-    float* data = stbi_loadf("Images/skybox15.hdr", &width, &height, &nrChannels, 0);
-    if (data)
-    {
-        //GLenum format = nrChannels == 3 ? GL_RGB : GL_RGB32F;
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB32F, width, height, 0, GL_RGB, GL_FLOAT, data);
-        glGenerateMipmap(GL_TEXTURE_2D);
+
+    for (int t = 0; t < 10; t++) {
+        int nrChannels;
+        std::string prefix = "Images/skybox";
+        std::string suffix = ".hdr";
+        std::string path = prefix + std::to_string(t) + suffix;
+        const char* path_cstring = path.c_str();
+        TextureData newData;
+        float* data = stbi_loadf(path_cstring, &newData.width, &newData.height, &nrChannels, 0);
+        if (data)
+        {   
+            newData.pixelData = data;
+            skyboxTextureDataArr[t] = newData;
+        }
+        else
+        {
+            LOG_ERROR("Failed to load texture");
+        }
+        //stbi_image_free(data);
     }
-    else
-    {
-        LOG_ERROR("Failed to load texture");
-    }
-    stbi_image_free(data);
 }
 
 void Scene::update() {
 	processInput();
+
+    
 
     auto ct = std::chrono::high_resolution_clock::now();
 
@@ -142,7 +151,6 @@ void Scene::update() {
 
     glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
     glBindFramebuffer(GL_DRAW_FRAMEBUFFER, prevFrameBuffer);
-    
 
     glBlitFramebuffer(
         0, 0, WIN_WIDTH, WIN_HEIGHT,
@@ -163,7 +171,6 @@ void Scene::update() {
         glfwTerminate();
         LOG_ERROR("Program Exited Sucessfully");
     }
-    
 
     frameIterator++;
     frameProgCount++;
@@ -223,10 +230,78 @@ void Scene::processInput() {
         cam.frontVector = glm::rotate(cam.frontVector, CAM_ROT_SPEED, cam.rightVector);
     }
 
-
+    if (glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS) {
+        resetFrameCounter();
+        // Skybox switching
+        TextureData skyboxData = skyboxTextureDataArr[1];
+        glBindTexture(GL_TEXTURE_2D, skyboxTexture);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB16F, skyboxData.width, skyboxData.height, 0, GL_RGB, GL_FLOAT, skyboxData.pixelData);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    if (glfwGetKey(window, GLFW_KEY_2) == GLFW_PRESS) {
+        resetFrameCounter();
+        TextureData skyboxData = skyboxTextureDataArr[2];
+        glBindTexture(GL_TEXTURE_2D, skyboxTexture);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB16F, skyboxData.width, skyboxData.height, 0, GL_RGB, GL_FLOAT, skyboxData.pixelData);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    if (glfwGetKey(window, GLFW_KEY_3) == GLFW_PRESS) {
+        resetFrameCounter();
+        TextureData skyboxData = skyboxTextureDataArr[3];
+        glBindTexture(GL_TEXTURE_2D, skyboxTexture);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB16F, skyboxData.width, skyboxData.height, 0, GL_RGB, GL_FLOAT, skyboxData.pixelData);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    if (glfwGetKey(window, GLFW_KEY_4) == GLFW_PRESS) {
+        resetFrameCounter();
+        TextureData skyboxData = skyboxTextureDataArr[4];
+        glBindTexture(GL_TEXTURE_2D, skyboxTexture);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB16F, skyboxData.width, skyboxData.height, 0, GL_RGB, GL_FLOAT, skyboxData.pixelData);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    if (glfwGetKey(window, GLFW_KEY_5) == GLFW_PRESS) {
+        resetFrameCounter();
+        TextureData skyboxData = skyboxTextureDataArr[5];
+        glBindTexture(GL_TEXTURE_2D, skyboxTexture);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB16F, skyboxData.width, skyboxData.height, 0, GL_RGB, GL_FLOAT, skyboxData.pixelData);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    if (glfwGetKey(window, GLFW_KEY_6) == GLFW_PRESS) {
+        resetFrameCounter();
+        TextureData skyboxData = skyboxTextureDataArr[6];
+        glBindTexture(GL_TEXTURE_2D, skyboxTexture);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB16F, skyboxData.width, skyboxData.height, 0, GL_RGB, GL_FLOAT, skyboxData.pixelData);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    if (glfwGetKey(window, GLFW_KEY_7) == GLFW_PRESS) {
+        resetFrameCounter();
+        TextureData skyboxData = skyboxTextureDataArr[7];
+        glBindTexture(GL_TEXTURE_2D, skyboxTexture);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB16F, skyboxData.width, skyboxData.height, 0, GL_RGB, GL_FLOAT, skyboxData.pixelData);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    if (glfwGetKey(window, GLFW_KEY_8) == GLFW_PRESS) {
+        resetFrameCounter();
+        TextureData skyboxData = skyboxTextureDataArr[8];
+        glBindTexture(GL_TEXTURE_2D, skyboxTexture);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB16F, skyboxData.width, skyboxData.height, 0, GL_RGB, GL_FLOAT, skyboxData.pixelData);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    if (glfwGetKey(window, GLFW_KEY_9) == GLFW_PRESS) {
+        resetFrameCounter();
+        TextureData skyboxData = skyboxTextureDataArr[9];
+        glBindTexture(GL_TEXTURE_2D, skyboxTexture);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB16F, skyboxData.width, skyboxData.height, 0, GL_RGB, GL_FLOAT, skyboxData.pixelData);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    if (glfwGetKey(window, GLFW_KEY_0) == GLFW_PRESS) {
+        resetFrameCounter();
+        TextureData skyboxData = skyboxTextureDataArr[0];
+        glBindTexture(GL_TEXTURE_2D, skyboxTexture);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB16F, skyboxData.width, skyboxData.height, 0, GL_RGB, GL_FLOAT, skyboxData.pixelData);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
 }
-
-
 
 // Functions to make code cleaner
 

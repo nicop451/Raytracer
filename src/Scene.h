@@ -22,13 +22,23 @@ struct Camera {
 	glm::vec3 pos = glm::vec3(0, -2, -1500);
 };
 
+struct TextureData {
+	float* pixelData;
+	int width = 0;
+	int height = 0;
+};
+
 class Scene {
 public:
 	// Window Data
 	GLFWwindow* window;
-	int frameIterator = 0;
 	Camera cam;
+
+	int frameIterator = 0;
 	float elapsedTime;
+
+	int skyboxSelectionNum = 0;
+	TextureData skyboxTextureDataArr[10];
 
 	Scene();	
 	void processInput();

@@ -5,6 +5,8 @@ out vec4 FragColor;
 uniform int u_fiter;
 uniform float elapsedTime;
 
+// To add spheres change object count
+
 // Camera Uniforms
 uniform float u_vpDist;
 uniform float u_camPitch;
@@ -21,17 +23,17 @@ uniform int u_frameProgCount;
 
 
 // Global Variables
-int SAMPLES = 30;
-float skyboxEmissionStrength = 1.6;
+int SAMPLES = 24;
+float skyboxEmissionStrength = 1.5;
 float exposure = 1.0;
-float DOF_AMOUNT = 20;
+float DOF_AMOUNT = 5;
 float DOF_DIST = 400;
 #define BOUNCES 15
 #define NUM_OF_OBJECTS 6
 #define PI 3.1415926
-#define antiAliasAmount 0.001
+#define antiAliasAmount 0.0005
 
-uint rngState = uint(uint(gl_FragCoord.x) * uint(1973) + uint(gl_FragCoord.y) * uint(9277) + uint(u_fiter) * uint(26699)) | uint(1);
+uint rngState = uint(uint(gl_FragCoord.x) * uint(1973) + uint(gl_FragCoord.y) * uint(9277) + uint(u_fiter - 1000) * uint(26699)) | uint(1);
 
 // --- Data Structures ----
 struct Ray {
@@ -72,16 +74,17 @@ Sphere sphereArray[NUM_OF_OBJECTS];
 // Better Random 
 uint wang_hash(inout uint seed);
 float RandomFloat01(inout uint state);
- 
 vec3 RandomUnitVector(inout uint state);
-
+// ACES tone mapping curve fit to go from HDR to LDR
+//https://knarkowicz.wordpress.com/2016/01/06/aces-filmic-tone-mapping-curve/
+vec3 ACESFilm(vec3 x);
 vec3 rotateVector(vec3 v, vec3 axis, float angle);
 vec3 randHemisphere(vec3 normal, vec2 seed);
 vec3 ReinhardToneMap(vec3 hdr, float bright);
 vec3 SRGBtoLinear(vec3 rgb);
 vec3 LineartoSRGB(vec3 rgb);
 vec3 getSkybox(vec3 dir);
-float fresnelFunction (float ior1, float ior2, vec3 normal, vec3 incident);
+float fresnelFunction (float ior1, float ior2, vec3 normal, vec3 incident, float f0, float f90);
 // ----------------------------------
 
 vec3 prevPixelColor = SRGBtoLinear(texture(u_prevFrameTexture, gl_FragCoord.xy / vec2(u_WIN_WIDTH, u_WIN_HEIGHT)).rgb);
@@ -94,7 +97,7 @@ Ray calcRayInfo () {
     float ratioToShrink = 1/pixelPos.z;
     pixelPos *= ratioToShrink * DOF_DIST;
 
-    vec3 focalPoint = normalize(vec3(RandomFloat01(rngState), RandomFloat01(rngState), 0)) * DOF_AMOUNT;
+    vec3 focalPoint = normalize(vec3(RandomFloat01(rngState) * 2.0f - 1.0f, RandomFloat01(rngState) * 2.0f - 1.0f, 0)) * DOF_AMOUNT;
 
     vec3 rayDir = normalize(pixelPos - focalPoint);
 
@@ -180,7 +183,6 @@ void initializeSpheres();
 
 void main() {
     initializeSpheres();
-
     // Calculate Auto Focus distance
     Ray focusRay = calcCameraFacingRay();
     hit focusTrace = TraceRay(focusRay, -1);
@@ -219,7 +221,7 @@ void main() {
             ray.light += hit.material.emmisivePower;
 
             // Calc if ray should be a specular ray
-            bool isSpecularRay =  hit.material.specularity + fresnelFunction(1, hit.material.ior, hit.normal, ray.dir) * 0.7 > abs(RandomFloat01(rngState));
+            bool isSpecularRay =  hit.material.specularity + fresnelFunction(1, hit.material.ior, hit.normal, ray.dir, 0.98, 0.25) > RandomFloat01(rngState);
                
             // Calc outgoing ray direction
             vec3 diffDir = normalize(hit.normal + RandomUnitVector(rngState)); // Fix Randomization
@@ -238,32 +240,25 @@ void main() {
     }
     // Average Previous Frame and Current
     vec3 currCalcColor = (cumulationColors / SAMPLES) * exposure;
-    vec3 averagedColor = ((prevPixelColor * (u_fiter)) + currCalcColor)/(u_fiter+1);
+    vec3 averagedColor = ((prevPixelColor * u_fiter) + currCalcColor)/(u_fiter+1);
+    //averagedColor = averagedColor;
     vec3 finalColor = LineartoSRGB(u_fiter > 1 ? averagedColor : currCalcColor);
 
     FragColor = vec4(finalColor, 1.0);
 }
 
 // Math Functions
-/*float randomFloat(vec2 seed) {
-    float modifiedSeed = float(u_fiter * PI) + seed.x * 10.0 + seed.y * 20.0;
-    //modifiedSeed *= elapsedTime;
-    return fract(sin(dot(vec2(modifiedSeed, modifiedSeed + 1.0), vec2(12.9898, 78.233))) * 43758.5453) * 2.0 - 1.0;
-}
-vec3 randHemisphere(vec3 normal, vec2 seed) {
-    vec3 randomCubeDir =  normalize(vec3(randomFloat(vec2(seed.x, seed.y)), randomFloat(vec2(seed.y, seed.x)), randomFloat(vec2(seed.x, seed.y / seed.x))));
-    randomCubeDir += normal;
-    return normalize(randomCubeDir);
-}*/
 vec3 ReinhardToneMap(vec3 hdr, float bright) {
     return hdr / (hdr + vec3(bright));
 }
-float fresnelFunction (float ior1, float ior2, vec3 normal, vec3 incident) {
+float fresnelFunction (float ior1, float ior2, vec3 normal, vec3 incident, float f0, float f90) {
     float ro = (ior1 - ior2)/(ior1 + ior2);
 
     float cosTheta = -dot(incident, normal);
 
-    return ro + (1 - ro) * pow((1 - cosTheta), 5);
+    float reflectivityCoeff = ro + (1 - ro) * pow((1 - cosTheta), 5);
+
+    return mix(f90, f0, reflectivityCoeff);
 }
 vec3 rotateVector(vec3 v, vec3 axis, float angle) {
     float cosTheta = cos(angle);
@@ -314,9 +309,18 @@ vec3 getSkybox(vec3 dir) {
     st.y = 0.5 - asin(dir.y) / PI;
     // Sample the cube map using the texture coordinates
     vec3 col = texture(u_skyboxTexture, st).rgb;
-    //col = clamp(col, 0.0, 5.0);
-    col = ReinhardToneMap(col, 1.3);
+    col = clamp(col, 0.0, 5.0);
+    col = ReinhardToneMap(col, 1.0);
     return SRGBtoLinear(col * skyboxEmissionStrength);
+}
+vec3 ACESFilm(vec3 x)
+{
+    float a = 2.51f;
+    float b = 0.03f;
+    float c = 2.43f;
+    float d = 0.59f;
+    float e = 0.14f;
+    return clamp((x*(a*x + b)) / (x*(c*x + d) + e), 0.0f, 1.0f);
 }
 
 // Random Number Generator
@@ -350,19 +354,20 @@ void initializeSpheres() {
     Material m1;
     m1.albedo = vec3(0.3, 0.5, 0.98);
     m1.roughness = 0.01;
-    m1.specularity = 0.25;
+    m1.specularity = 1.25;
     m1.specularColor = vec3(0.98, 0.98, 0.98);
     m1.emmisivePower = 0;
-    m1.ior = 1.6;
+    m1.ior = 1.7;
 
     sphereArray[0].radius = 200;
-    sphereArray[0].position = vec3((0 * 450) - 700, -500, 0);
+    sphereArray[0].position = vec3((0 * 400) - 700, -500, 0);
     sphereArray[0].material = m1;
     
-    m1.specularity = 0.20;
-    m1.albedo = vec3(0.88, 0.5, 0.95);
+    m1.specularity = 1.5;
+    m1.roughness = 0.0;
+    m1.albedo = vec3(0.3, 0.8, 0.9);
     sphereArray[1].radius = 200;
-    sphereArray[1].position = vec3((1 * 450) - 700, -500, 0);
+    sphereArray[1].position = vec3((1 * 400) - 700, -500, 0);
     sphereArray[1].material = m1;
 
     m1.albedo = vec3(0.7,0.7,0.7);
@@ -370,23 +375,24 @@ void initializeSpheres() {
     m1.specularity = 0.99;
     m1.specularColor = m1.albedo;
     sphereArray[2].radius = 200;
-    sphereArray[2].position = vec3((2 * 450) - 700, -500, 0);
+    sphereArray[2].position = vec3((3 * 450) - 700, -500, 0);
     sphereArray[2].material = m1;
 
-    m1.albedo = vec3(0.4, 0.8, 0.5);
+    m1.albedo = vec3(0.8, 0.5, 0.5);
     m1.emmisivePower = 5;
     m1.roughness = 0.0;
     m1.specularity = 0.0;
     sphereArray[3].radius = 200;
-    sphereArray[3].position = vec3((3 * 450) - 700, -500, 0);
+    sphereArray[3].position = vec3((2 * 450) - 700, -500, 0);
     sphereArray[3].material = m1;
 
     m1.emmisivePower = 0;
-    m1.roughness = 1.0;
-    m1.specularity = 0.0;
-    m1.albedo = vec3(0.9, 0.9, 0.9);
-    sphereArray[5].radius = 300;
-    sphereArray[5].position = vec3((3 * 120) - 700, -400, 500);
+    m1.roughness = 0.03;
+    m1.specularity = 0.99;
+    m1.albedo = vec3(0.5, 0.76, 0.85);
+    m1.specularColor = m1.albedo;
+    sphereArray[5].radius = 1000;
+    sphereArray[5].position = vec3((3 * 120) - 300, 300, 1200);
     sphereArray[5].material = m1;
 
 
@@ -399,7 +405,7 @@ void initializeSpheres() {
     m.specularColor = vec3(0.9, 0.9, 0.9);
 
 
-    m.albedo = vec3(0.6, 0.6, 0.6);
+    m.albedo = vec3(0.98, 0.98, 0.98);
     sphereArray[4].radius = 90000;
     sphereArray[4].position = vec3(0, -90700, 0);
     sphereArray[4].material = m;
@@ -413,12 +419,12 @@ void initializeSpheres() {
     //-------------------------------------------
 
     // Ceiling Light
-    m.emmisivePower = 30;
+    m.emmisivePower = 3000;
     m.roughness = 1.0;
     m.specularity = 1.0;
     m.albedo = vec3(0.2, 1.0, 1.0);
     
-    /*sphereArray[6].radius = 500;
+    /*sphereArray[6].radius = 50;
     sphereArray[6].position = vec3(0, 1200, -100);
     sphereArray[6].material = m;*/
 }

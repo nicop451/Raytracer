@@ -1,0 +1,50 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\dev\\Breeze_OpenGL\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{36A9CB4B-6A04-40AE-BE63-60BC7DC1CBE7}|OpenGLTemplate.vcxproj|C:\\dev\\Breeze_OpenGL\\Debug\\ErrorUtility.obj||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{36A9CB4B-6A04-40AE-BE63-60BC7DC1CBE7}|OpenGLTemplate.vcxproj|solutionrelative:Debug\\ErrorUtility.obj||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36A9CB4B-6A04-40AE-BE63-60BC7DC1CBE7}|OpenGLTemplate.vcxproj|C:\\dev\\Breeze_OpenGL\\Debug\\glad.obj||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{36A9CB4B-6A04-40AE-BE63-60BC7DC1CBE7}|OpenGLTemplate.vcxproj|solutionrelative:Debug\\glad.obj||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ErrorUtility.obj",
+              "DocumentMoniker": "C:\\dev\\Breeze_OpenGL\\Debug\\ErrorUtility.obj",
+              "RelativeDocumentMoniker": "Debug\\ErrorUtility.obj",
+              "ToolTip": "C:\\dev\\Breeze_OpenGL\\Debug\\ErrorUtility.obj",
+              "RelativeToolTip": "Debug\\ErrorUtility.obj",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQLSURBVDhPlVRLSKNXGL3/n8TEJCZGa6LGtxKrNT7widiICoJaBxWkSBG1G6sbF0LBld25qbZ14WZcjOBAK7RCDb6wPhjFWl1YX6hxiKDEmsb4SkxMTNJz/8RZdEiHHrgk/839zz3f\u002Bc4X8m9oNBrhxcWF1mazLWBZsX49Pj7OjImJEQSOBIfP5wt886O6ujpsfX1dd3d399vU1JRldHTUNTs7a76\u002Bvtavra0VlpWVSQJHg4IX\u002BCSNjY3yzs7OT7Ozszs3NjZ0S0tL0v39fT7IhCEhISrsR0GlBYotBoPhMfDae\u002BAIqTJKlp\u002Bf3wKSFzMzM2KUyV5dXZHb21sWSxgeHp6ak5PDRERE3FgsFvP5\u002BbmrpqZGVlBQIBYKhQxseuIIqWfDw8MFWVlZX4HsM71eL97b22MeH/0iXC4XsVqtjNPpFCQnJ2uKioocqamp\u002B9vb286RkZGi1tbWNLFYzMezFRd7KbNWIpF8Tz2an5\u002BX7OzsMF6vlyN7hkgkIlBCmpub7SkpKa/cbvdLh8MhkkqlP7AsG4dL9fD\u002B27q6ureM3W5fWFxczFtZWZEfHh6yeA7Q\u002BIFSCdSThoYGkpCQ4AkNDTVh2/T09MTDe\u002BnwVIRLTFC9sLW1NcBnGCb/8vJSajab3yOjoCXjd7K6ukoEAgH1PJ4uj8dDDg4OCKwg8FMNpdUVFRVOPqLzJi4urkStVitubm549/f3HJFcLifoKqeQkk5PT5OkpCTC4/G4C\u002BArd44C5HylUhmLpn3Ba29v/xON\u002BQTRiEL\u002BhOgsw\u002BfzSV5enrepqckG35w4KFpeXiZtbW10nyBKVBVHRs\u002BCzJeWlvaYnp7\u002BF1teXm6A9G8QmXmY6iwsLCR0wTNnRkbGa1TwHfdmAPCOPCeAAv6RqqoqF6J3gLPdPJjqReZuUd7fubm5TGJioiYzM9MNC0YnJyd/ROe9UNU0NzfHdRrVkLCwMEKtUalUpLKykgrYRWWvu7u79Xx6Cwy3y2SyP\u002BAFW1tb\u002B0D3JiYmfhobG9tVKBTKjo4OusUBz0Sr1XJjS5tCm/Pw8CBGtD5CyaJ3o0fHCRNwCaW7p6envw8MDBg2NzcdOPQxrPicKoyMjOQI0DyuOYgZMRqN1AIZSo/CuSsmwBcU9fX1DZiIX/r6\u002BrjOUsLn9Yz4\u002BHii0\u002Bk8LS0t92xg7z9BI9Tf30\u002BGhoZIV1cXV3IwvCs5GOCP/ezsbBeh3YiOjo5AZCJPTk54JhMdGELQPFJcXOzGX5sRFw9/kBDZvDs6OtpBTg2xsbEs5l6B6VChfB4aSUpKStylpaWH6PzP4\u002BPjrz5ISAHTfZh1GwiNmGsGc5uILiswOV4oO6VkaNrLnp4ef9r/D3p7e5XI7pew4poufP96cHBQ7f\u002BVkH8AGd8McJZ1\u002BjwAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-09-26T21:26:27.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "glad.obj",
+              "DocumentMoniker": "C:\\dev\\Breeze_OpenGL\\Debug\\glad.obj",
+              "RelativeDocumentMoniker": "Debug\\glad.obj",
+              "ToolTip": "C:\\dev\\Breeze_OpenGL\\Debug\\glad.obj",
+              "RelativeToolTip": "Debug\\glad.obj",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQLSURBVDhPlVRLSKNXGL3/n8TEJCZGa6LGtxKrNT7widiICoJaBxWkSBG1G6sbF0LBld25qbZ14WZcjOBAK7RCDb6wPhjFWl1YX6hxiKDEmsb4SkxMTNJz/8RZdEiHHrgk/839zz3f\u002Bc4X8m9oNBrhxcWF1mazLWBZsX49Pj7OjImJEQSOBIfP5wt886O6ujpsfX1dd3d399vU1JRldHTUNTs7a76\u002Bvtavra0VlpWVSQJHg4IX\u002BCSNjY3yzs7OT7Ozszs3NjZ0S0tL0v39fT7IhCEhISrsR0GlBYotBoPhMfDae\u002BAIqTJKlp\u002Bf3wKSFzMzM2KUyV5dXZHb21sWSxgeHp6ak5PDRERE3FgsFvP5\u002BbmrpqZGVlBQIBYKhQxseuIIqWfDw8MFWVlZX4HsM71eL97b22MeH/0iXC4XsVqtjNPpFCQnJ2uKioocqamp\u002B9vb286RkZGi1tbWNLFYzMezFRd7KbNWIpF8Tz2an5\u002BX7OzsMF6vlyN7hkgkIlBCmpub7SkpKa/cbvdLh8MhkkqlP7AsG4dL9fD\u002B27q6ureM3W5fWFxczFtZWZEfHh6yeA7Q\u002BIFSCdSThoYGkpCQ4AkNDTVh2/T09MTDe\u002BnwVIRLTFC9sLW1NcBnGCb/8vJSajab3yOjoCXjd7K6ukoEAgH1PJ4uj8dDDg4OCKwg8FMNpdUVFRVOPqLzJi4urkStVitubm549/f3HJFcLifoKqeQkk5PT5OkpCTC4/G4C\u002BArd44C5HylUhmLpn3Ba29v/xON\u002BQTRiEL\u002BhOgsw\u002BfzSV5enrepqckG35w4KFpeXiZtbW10nyBKVBVHRs\u002BCzJeWlvaYnp7\u002BF1teXm6A9G8QmXmY6iwsLCR0wTNnRkbGa1TwHfdmAPCOPCeAAv6RqqoqF6J3gLPdPJjqReZuUd7fubm5TGJioiYzM9MNC0YnJyd/ROe9UNU0NzfHdRrVkLCwMEKtUalUpLKykgrYRWWvu7u79Xx6Cwy3y2SyP\u002BAFW1tb\u002B0D3JiYmfhobG9tVKBTKjo4OusUBz0Sr1XJjS5tCm/Pw8CBGtD5CyaJ3o0fHCRNwCaW7p6envw8MDBg2NzcdOPQxrPicKoyMjOQI0DyuOYgZMRqN1AIZSo/CuSsmwBcU9fX1DZiIX/r6\u002BrjOUsLn9Yz4\u002BHii0\u002Bk8LS0t92xg7z9BI9Tf30\u002BGhoZIV1cXV3IwvCs5GOCP/ezsbBeh3YiOjo5AZCJPTk54JhMdGELQPFJcXOzGX5sRFw9/kBDZvDs6OtpBTg2xsbEs5l6B6VChfB4aSUpKStylpaWH6PzP4\u002BPjrz5ISAHTfZh1GwiNmGsGc5uILiswOV4oO6VkaNrLnp4ef9r/D3p7e5XI7pew4poufP96cHBQ7f\u002BVkH8AGd8McJZ1\u002BjwAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-09-26T21:26:21.649Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

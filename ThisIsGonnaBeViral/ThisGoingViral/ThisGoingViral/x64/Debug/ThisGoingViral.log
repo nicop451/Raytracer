@@ -1,0 +1,41 @@
+﻿  Solver.cpp
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\Solver.h(19,33): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'Solver.cpp')
+  
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\Solver.cpp(29,36): warning C4305: '+=': truncation from 'double' to 'float'
+  main.cpp
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\Solver.h(19,33): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'main.cpp')
+  
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(29,90): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(29,90): warning C4305:         with
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(29,90): warning C4305:         [
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(29,90): warning C4305:             T=float
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(29,90): warning C4305:         ]
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(29,85): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(29,85): warning C4305:         with
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(29,85): warning C4305:         [
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(29,85): warning C4305:             T=float
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(29,85): warning C4305:         ]
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(30,91): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(30,91): warning C4305:         with
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(30,91): warning C4305:         [
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(30,91): warning C4305:             T=float
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(30,91): warning C4305:         ]
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(30,86): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(30,86): warning C4305:         with
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(30,86): warning C4305:         [
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(30,86): warning C4305:             T=float
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(30,86): warning C4305:         ]
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(31,91): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(31,91): warning C4305:         with
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(31,91): warning C4305:         [
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(31,91): warning C4305:             T=float
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(31,91): warning C4305:         ]
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(31,85): warning C4305: 'argument': truncation from 'double' to 'T'
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(31,85): warning C4305:         with
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(31,85): warning C4305:         [
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(31,85): warning C4305:             T=float
+C:\dev\ThisIsGonnaBeViral\ThisGoingViral\main.cpp(31,85): warning C4305:         ]
+  Generating Code...
+  ThisGoingViral.vcxproj -> C:\dev\ThisIsGonnaBeViral\ThisGoingViral\x64\Debug\ThisGoingViral.exe

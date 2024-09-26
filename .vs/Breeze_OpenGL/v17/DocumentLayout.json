@@ -7,16 +7,24 @@
       "RelativeMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|solutionrelative:src\\shaders\\FragmentShader.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|C:\\dev\\src\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|solutionrelative:src\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|C:\\dev\\src\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|solutionrelative:src\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|C:\\dev\\src\\DefaultSettings.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|solutionrelative:src\\DefaultSettings.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|C:\\dev\\src\\ErrorUtility.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|solutionrelative:src\\ErrorUtility.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|C:\\dev\\src\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|solutionrelative:src\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|C:\\dev\\src\\ErrorUtility.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|solutionrelative:src\\ErrorUtility.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|C:\\dev\\src\\DefaultSettings.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2A934E1D-20F5-4D1A-A6BA-93BA592ECDCF}|Breeze_OpenGL.vcxproj|solutionrelative:src\\DefaultSettings.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,35 +34,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Scene.h",
               "DocumentMoniker": "C:\\dev\\src\\Scene.h",
               "RelativeDocumentMoniker": "src\\Scene.h",
               "ToolTip": "C:\\dev\\src\\Scene.h",
               "RelativeToolTip": "src\\Scene.h",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAB4AAAATAAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAAADwAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-08T00:43:43.069Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Scene.cpp",
               "DocumentMoniker": "C:\\dev\\src\\Scene.cpp",
               "RelativeDocumentMoniker": "src\\Scene.cpp",
               "ToolTip": "C:\\dev\\src\\Scene.cpp",
               "RelativeToolTip": "src\\Scene.cpp",
-              "ViewState": "AQIAAGsAAAAAAAAAAAAswE8AAAAQAAAA",
+              "ViewState": "AQIAABMBAAAAAAAAAAAowBoBAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-11T15:41:07.186Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ErrorUtility.h",
+              "DocumentMoniker": "C:\\dev\\src\\ErrorUtility.h",
+              "RelativeDocumentMoniker": "src\\ErrorUtility.h",
+              "ToolTip": "C:\\dev\\src\\ErrorUtility.h",
+              "RelativeToolTip": "src\\ErrorUtility.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-08-06T02:13:08.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ErrorUtility.cpp",
+              "DocumentMoniker": "C:\\dev\\src\\ErrorUtility.cpp",
+              "RelativeDocumentMoniker": "src\\ErrorUtility.cpp",
+              "ToolTip": "C:\\dev\\src\\ErrorUtility.cpp",
+              "RelativeToolTip": "src\\ErrorUtility.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-06T02:15:32.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DefaultSettings.cpp",
+              "DocumentMoniker": "C:\\dev\\src\\DefaultSettings.cpp",
+              "RelativeDocumentMoniker": "src\\DefaultSettings.cpp",
+              "ToolTip": "C:\\dev\\src\\DefaultSettings.cpp",
+              "RelativeToolTip": "src\\DefaultSettings.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-01T14:33:21.085Z"
             },
             {
               "$type": "Document",
@@ -64,22 +106,9 @@
               "RelativeDocumentMoniker": "src\\shaders\\FragmentShader.frag",
               "ToolTip": "C:\\dev\\src\\shaders\\FragmentShader.frag",
               "RelativeToolTip": "src\\shaders\\FragmentShader.frag",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB0AAAAYAAAA",
+              "ViewState": "AQIAAH8BAAAAAAAAAAAswJQBAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-04-08T18:46:18.362Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DefaultSettings.cpp",
-              "DocumentMoniker": "C:\\dev\\src\\DefaultSettings.cpp",
-              "RelativeDocumentMoniker": "src\\DefaultSettings.cpp",
-              "ToolTip": "C:\\dev\\src\\DefaultSettings.cpp",
-              "RelativeToolTip": "src\\DefaultSettings.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-05T14:26:34.865Z",
               "EditorCaption": ""
             }
           ]
